@@ -216,25 +216,44 @@ npm run dev
 The React application will run using the local Vite development server.
 
 ---
-
 ## 📸 Interface
 
-### Career Dashboard
-Displays the user's weighted career readiness, matched skills, missing skills, and current focus.
+### Sign In
+Secure authentication for new and returning users.
 
-### Profile
-Allows users to manage personal information, skills, certificates, projects, and custom skills.
+![Jisr Sign In](screenshots/signin.png)
+
+### Onboarding
+New users build their initial career profile and select their target career through a guided onboarding experience.
+
+![Jisr Onboarding](screenshots/onboarding.png)
+
+### Career Dashboard
+The dashboard provides an overview of career readiness, matched skills, skill gaps, and the user's current focus.
+
+![Jisr Dashboard](screenshots/dashboard.png)
+
+### Profile & Skills
+Users can manage their profile, skills, certificates, projects, and custom skills.
+
+![Jisr Profile](screenshots/profile.png)
+
+![Jisr Skills](screenshots/skills.png)
 
 ### Career Goal
-Allows users to select or change their target career and dynamically updates their career analysis.
+Users can select or change their target career, dynamically updating their career analysis and roadmap.
 
-### Roadmap
-Provides a personalized progression path based on the user's missing skills.
+![Jisr Career Goal](screenshots/career-goal.png)
 
-### AI Advisor
-Generates personalized career insights, priority skills, project recommendations, and next steps.
+### Personalized Roadmap
+The roadmap transforms identified skill gaps into a clear, trackable progression path.
 
-> Application screenshots can be added here to demonstrate the complete user experience.
+![Jisr Roadmap](screenshots/roadmap.png)
+
+### AI Career Advisor
+The AI Advisor provides personalized career insights, priority skills, project recommendations, and actionable next steps.
+
+![Jisr AI Advisor](screenshots/ai-advisor.png)
 
 ---
 
