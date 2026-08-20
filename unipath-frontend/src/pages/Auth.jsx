@@ -55,7 +55,7 @@ function Auth() {
 
         if (newUser) {
           const profileResponse = await fetch(
-            "http://127.0.0.1:8000/profile",
+            "https://jisr-backend.onrender.com/profile",
             {
               method: "POST",
               headers: {
@@ -120,7 +120,7 @@ if (!user) {
 }
 
 const profileResponse = await fetch(
-  `http://127.0.0.1:8000/profile/${user.id}`
+  `https://jisr-backend.onrender.com/profile/${user.id}`
 )
 
 if (!profileResponse.ok) {

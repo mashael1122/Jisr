@@ -32,9 +32,9 @@ function Onboarding() {
       try {
         const [profileResponse, skillsResponse, jobsResponse] =
           await Promise.all([
-            fetch(`http://127.0.0.1:8000/profile/${userId}`),
-            fetch("http://127.0.0.1:8000/skills"),
-            fetch("http://127.0.0.1:8000/jobs")
+            fetch(`https://jisr-backend.onrender.com/profile/${userId}`),
+            fetch("https://jisr-backend.onrender.com/skills"),
+            fetch("https://jisr-backend.onrender.com/jobs")
           ])
 
         if (
@@ -126,7 +126,7 @@ function Onboarding() {
 
       // 1. Update profile
       const profileResponse = await fetch(
-        `http://127.0.0.1:8000/profile/${userId}`,
+        `https://jisr-backend.onrender.com/profile/${userId}`,
         {
           method: "PATCH",
           headers: {
@@ -148,7 +148,7 @@ function Onboarding() {
       // 2. Add selected skills
       for (const skillId of selectedSkillIds) {
         const skillResponse = await fetch(
-          "http://127.0.0.1:8000/user/skills",
+          "https://jisr-backend.onrender.com/user/skills",
           {
             method: "POST",
             headers: {
@@ -172,7 +172,7 @@ function Onboarding() {
       // 3. Save career goal
       // This will also generate the roadmap
       const targetResponse = await fetch(
-        "http://127.0.0.1:8000/user/target-job",
+        "https://jisr-backend.onrender.com/user/target-job",
         {
           method: "POST",
           headers: {
@@ -193,7 +193,7 @@ function Onboarding() {
 }
 
 const onboardingResponse = await fetch(
-  `http://127.0.0.1:8000/profile/${userId}/onboarding-complete`,
+  `https://jisr-backend.onrender.com/profile/${userId}/onboarding-complete`,
   {
     method: "PATCH"
   }

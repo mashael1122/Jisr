@@ -12,7 +12,7 @@ function Dashboard() {
     async function loadReadiness() {
       try {
         const response = await fetch(
-          `http://127.0.0.1:8000/user/readiness/${userId}`
+          `https://jisr-backend.onrender.com/user/readiness/${userId}`
         )
 
         if (!response.ok) {

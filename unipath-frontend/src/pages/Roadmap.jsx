@@ -10,7 +10,7 @@ function Roadmap() {
   async function loadRoadmap() {
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/user/roadmap/${userId}`
+        `https://jisr-backend.onrender.com/user/roadmap/${userId}`
       )
 
       if (!response.ok) {
@@ -36,7 +36,7 @@ function Roadmap() {
       setUpdatingId(id)
 
       const response = await fetch(
-        `http://127.0.0.1:8000/user/roadmap/${id}`,
+        `https://jisr-backend.onrender.com/user/roadmap/${id}`,
         {
           method: "PATCH",
           headers: {

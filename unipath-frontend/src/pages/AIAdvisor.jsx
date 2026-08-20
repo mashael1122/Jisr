@@ -14,7 +14,7 @@ function AIAdvisor() {
     async function loadAdvisor() {
       try {
         const response = await fetch(
-          `http://127.0.0.1:8000/ai/advisor/${userId}`,
+          `https://jisr-backend.onrender.com/ai/advisor/${userId}`,
           {
             method: "POST"
           }

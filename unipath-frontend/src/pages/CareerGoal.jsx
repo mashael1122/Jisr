@@ -16,11 +16,11 @@ function CareerGoal() {
     async function loadCareerGoal() {
       try {
         const jobsResponse = await fetch(
-          "http://127.0.0.1:8000/jobs"
+          "https://jisr-backend.onrender.com/jobs"
         )
 
         const currentResponse = await fetch(
-          `http://127.0.0.1:8000/user/target-job/${userId}`
+          `https://jisr-backend.onrender.com/user/target-job/${userId}`
         )
 
         if (!jobsResponse.ok || !currentResponse.ok) {
@@ -60,7 +60,7 @@ function CareerGoal() {
       setMessage("")
 
       const response = await fetch(
-        "http://127.0.0.1:8000/user/target-job",
+        "https://jisr-backend.onrender.com/user/target-job",
         {
           method: "POST",
           headers: {

@@ -65,7 +65,7 @@ function Profile() {
     async function loadProfile() {
       try {
         const response = await fetch(
-          `http://127.0.0.1:8000/profile/${userId}`
+          `https://jisr-backend.onrender.com/profile/${userId}`
         )
 
         if (!response.ok) {
@@ -103,7 +103,7 @@ function Profile() {
   async function loadUserSkills() {
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/user/skills/${userId}`
+        `https://jisr-backend.onrender.com/user/skills/${userId}`
       )
 
       if (!response.ok) {
@@ -137,7 +137,7 @@ function Profile() {
   async function loadAllSkills() {
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/skills"
+        "https://jisr-backend.onrender.com/skills"
       )
 
       if (!response.ok) {
@@ -188,7 +188,7 @@ function Profile() {
       setMessage("")
 
       const response = await fetch(
-        `http://127.0.0.1:8000/profile/${userId}`,
+        `https://jisr-backend.onrender.com/profile/${userId}`,
         {
           method: "PATCH",
           headers: {
@@ -279,7 +279,7 @@ function Profile() {
     setMessage("")
 
     const response = await fetch(
-      "http://127.0.0.1:8000/user/custom-skill",
+      "https://jisr-backend.onrender.com/user/custom-skill",
       {
         method: "POST",
         headers: {
@@ -303,7 +303,7 @@ function Profile() {
 
 if (newSkillId) {
   const weightResponse = await fetch(
-    "http://127.0.0.1:8000/ai/skill-weight",
+    "https://jisr-backend.onrender.com/ai/skill-weight",
     {
       method: "POST",
       headers: {
@@ -360,7 +360,7 @@ if (newSkillId) {
       // Add new skills
       for (const skillId of skillsToAdd) {
         const response = await fetch(
-          "http://127.0.0.1:8000/user/skills",
+          "https://jisr-backend.onrender.com/user/skills",
           {
             method: "POST",
             headers: {
@@ -384,7 +384,7 @@ if (newSkillId) {
       // Delete removed skills
       for (const skillId of skillsToDelete) {
         const response = await fetch(
-          `http://127.0.0.1:8000/user/skills/${userId}/${skillId}`,
+          `https://jisr-backend.onrender.com/user/skills/${userId}/${skillId}`,
           {
             method: "DELETE"
           }
@@ -419,7 +419,7 @@ if (newSkillId) {
   async function loadCertificates() {
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/user/certificates/${userId}`
+        `https://jisr-backend.onrender.com/user/certificates/${userId}`
       )
 
       if (!response.ok) {
@@ -484,7 +484,7 @@ if (newSkillId) {
       setMessage("")
 
       const response = await fetch(
-        "http://127.0.0.1:8000/user/certificates",
+        "https://jisr-backend.onrender.com/user/certificates",
         {
           method: "POST",
           headers: {
@@ -539,7 +539,7 @@ if (newSkillId) {
       setMessage("")
 
       const response = await fetch(
-        `http://127.0.0.1:8000/user/certificates/${certificateId}`,
+        `https://jisr-backend.onrender.com/user/certificates/${certificateId}`,
         {
           method: "DELETE"
         }
@@ -568,7 +568,7 @@ if (newSkillId) {
   async function loadProjects() {
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/user/projects/${userId}`
+        `https://jisr-backend.onrender.com/user/projects/${userId}`
       )
       if (!response.ok) throw new Error("Failed to load projects")
       const data = await response.json()
@@ -609,7 +609,7 @@ if (newSkillId) {
       setMessage("")
 
       const response = await fetch(
-        "http://127.0.0.1:8000/user/projects",
+        "https://jisr-backend.onrender.com/user/projects",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -642,7 +642,7 @@ if (newSkillId) {
     try {
       setMessage("")
       const response = await fetch(
-        `http://127.0.0.1:8000/user/projects/${projectId}`,
+        `https://jisr-backend.onrender.com/user/projects/${projectId}`,
         { method: "DELETE" }
       )
       if (!response.ok) throw new Error(await response.text())
